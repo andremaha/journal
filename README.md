@@ -1,24 +1,11 @@
-# README
+# Simple Daily Journal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Keep your head clear - and focused on your daily goals by writing.
+This structured journal helps you structure your thoughts, focus on your goals
+and improve the consistency of your daily actions.
 
-Things you may want to cover:
+This is a private place - you can host it yourself or run locally.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## TODO
+- Add Strike Calendar
+- Add different fields
