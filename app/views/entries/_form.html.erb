@@ -1,0 +1,40 @@
+<%= form_with model: @entry, local: true do |form| %>
+
+  <% if @entry.errors.any? %>
+  <div class="erros">
+    <h2>
+      <%= pluralize @entry.errors.count, 'error'%> prohibited this entry from being saved:
+    </h2>
+    <ul>
+      <% @entry.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :subtitle %><br>
+    <%= form.text_field :subtitle %>
+  </p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>

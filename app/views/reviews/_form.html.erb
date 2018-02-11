@@ -1,0 +1,10 @@
+<%= form_with model: [@entry, @entry.reviews.build], local: true do |form| %>
+  <p>
+    <%= form.label :thoughts %>
+    <br  />
+    <%= form.text_area :thoughts %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

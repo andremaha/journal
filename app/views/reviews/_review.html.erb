@@ -1,0 +1,9 @@
+<p>
+  <strong><%= review.created_at.to_formatted_s :long_ordinal %></strong>
+  <%= review.thoughts %>
+</p>
+<p>
+  <%= link_to 'Destroy Review', [review.entry, review],
+              method: :delete,
+              data: { confirm: 'Ready to delete this review?' }%>
+</p>

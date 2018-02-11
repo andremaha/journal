@@ -1,0 +1,10 @@
+<% provide :title, 'Journal' %>
+<% content_for :header do %>
+Journal
+<% end %>
+<%= render @entries %>
+
+<!-- Pager -->
+<div class="clearfix">
+  <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+</div>

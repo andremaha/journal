@@ -1,0 +1,26 @@
+<% provide :title, @entry.title %>
+
+<% content_for :subheader do %>
+  <%= @entry.subtitle %>
+<% end %>
+
+<%= link_to '< Back', entries_path %>
+
+<h4><%= @entry.created_at.to_formatted_s :long_ordinal %></h4>
+<p>
+<%= @entry.text %>
+</p>
+
+<h2>Entry Reviews</h2>
+<%= render @entry.reviews %>
+
+<h2>Review your Entry:</h2>
+<%= render 'reviews/form' %>
+
+<div class="clearfix">
+  <%= link_to 'Edit Entry', edit_entry_path, class: 'btn btn-primary float-left'%>
+  <%= link_to 'Delete Entry', entry_path(@entry),
+              method: :delete,
+              data: { confirm: 'Are you sure you want to get rid of this entry?' },
+              class: 'btn btn-primary float-right' %>
+</div>
